@@ -11,7 +11,7 @@ import {
 import { useState, useEffect } from "react";
 import "@/global.css";
 import "nativewind";
-
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import api from "@/api/apiService";
 import { login } from "@/api/userApi";
 import { useRouter } from "expo-router";
