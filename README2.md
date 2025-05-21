@@ -1,25 +1,45 @@
 ## lancer le backend
 
-```cd back-symfony```
+```
+cd back-symfony
+```
 
-```docker compose up --build -d```
+```
+docker compose up --build -d
+```
 
-```composer install```
+```
+composer install
+```
 
  - Regarder le nom du container docker avec la commande ```docker ps```
 
-```docker exec -it back-symfony-web-1 bash``` Remplacer back-symfony-web-1 par le nom du container
+```
+docker exec -it back-symfony-web-1 bash
+```
 
-```php bin/console doctrine:database:create```
+ - Remplacer back-symfony-web-1 par le nom du container
 
-```php bin/console doctrine:database:create```
+```
+php bin/console doctrine:database:create
+```
+
+```
+php bin/console doctrine:database:create
+```
 ```
 php bin/console lexik:jwt:generate-keypair
 ```
 ## lancer le frontend
 
-```cd caentoche-front```
+```
+cd caentoche-front
+```
 
-```npm install```
+```
+npm install
+```
 
-```npx expo start```
+```
+npx expo start
+```
