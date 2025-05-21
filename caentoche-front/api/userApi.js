@@ -29,3 +29,13 @@ export const signup = async (userData) => {
     throw error;
   }
 };
+
+// Call server to invalidate token (stateless JWT logout)
+export const logout = async () => {
+  try {
+    await api.post('/api/logout');
+  } catch (error) {
+    console.error('Erreur lors de la déconnexion', error);
+    throw error;
+  }
+};
