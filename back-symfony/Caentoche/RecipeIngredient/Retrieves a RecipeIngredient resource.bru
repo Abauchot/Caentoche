@@ -1,0 +1,20 @@
+meta {
+  name: Retrieves a RecipeIngredient resource.
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/recipe_ingredients/:id
+  body: none
+  auth: none
+}
+
+params:path {
+  id: 
+}
+
+script:post-response {
+  if (res.status === 404) {
+  }
+}

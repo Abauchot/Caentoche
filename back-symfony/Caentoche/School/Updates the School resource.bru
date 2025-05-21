@@ -1,0 +1,26 @@
+meta {
+  name: Updates the School resource.
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/api/schools/:id
+  body: none
+  auth: none
+}
+
+params:path {
+  id: 
+}
+
+script:post-response {
+  if (res.status === 200) {
+  }
+  if (res.status === 400) {
+  }
+  if (res.status === 404) {
+  }
+  if (res.status === 422) {
+  }
+}

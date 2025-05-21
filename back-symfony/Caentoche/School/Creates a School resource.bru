@@ -1,0 +1,20 @@
+meta {
+  name: Creates a School resource.
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/schools
+  body: none
+  auth: none
+}
+
+script:post-response {
+  if (res.status === 201) {
+  }
+  if (res.status === 400) {
+  }
+  if (res.status === 422) {
+  }
+}

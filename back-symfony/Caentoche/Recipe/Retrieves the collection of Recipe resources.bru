@@ -1,0 +1,15 @@
+meta {
+  name: Retrieves the collection of Recipe resources.
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/recipes
+  body: none
+  auth: none
+}
+
+params:query {
+  ~page: 
+}

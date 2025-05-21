@@ -1,0 +1,20 @@
+meta {
+  name: Removes the Order resource.
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/api/orders/:id
+  body: none
+  auth: none
+}
+
+params:path {
+  id: 
+}
+
+script:post-response {
+  if (res.status === 404) {
+  }
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Retrieves the collection of Payment resources.
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/payments
+  body: none
+  auth: none
+}
+
+params:query {
+  ~page: 
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Retrieves the collection of Cart resources.
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/carts
+  body: none
+  auth: none
+}
+
+params:query {
+  ~page: 
+}

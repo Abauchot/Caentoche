@@ -1,0 +1,15 @@
+meta {
+  name: Retrieves the collection of School resources.
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/schools
+  body: none
+  auth: none
+}
+
+params:query {
+  ~page: 
+}

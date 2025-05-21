@@ -1,0 +1,24 @@
+meta {
+  name: Creates a Order resource.
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/api/orders/:id/checkout
+  body: none
+  auth: none
+}
+
+params:path {
+  id: 
+}
+
+script:post-response {
+  if (res.status === 201) {
+  }
+  if (res.status === 400) {
+  }
+  if (res.status === 422) {
+  }
+}

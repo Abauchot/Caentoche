@@ -1,0 +1,19 @@
+meta {
+  name: Creates a user token.
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "marin@mds.org",
+    "password": "azerty123%"
+    
+  }
+}

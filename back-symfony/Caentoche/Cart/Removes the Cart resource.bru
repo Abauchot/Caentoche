@@ -1,0 +1,20 @@
+meta {
+  name: Removes the Cart resource.
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/api/carts/:id
+  body: none
+  auth: none
+}
+
+params:path {
+  id: 
+}
+
+script:post-response {
+  if (res.status === 404) {
+  }
+}
