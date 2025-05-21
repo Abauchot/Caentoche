@@ -22,7 +22,7 @@ export const login = async ({ email, password }) => {
 
 export const signup = async (userData) => {
   try {
-    const response = await api.post("/api/register/", userData);
+    const response = await api.post("/api/register", userData);
     return response.data;
   } catch (error) {
     console.error("Erreur lors de l'inscription", error);

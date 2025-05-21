@@ -12,6 +12,7 @@ const Signup = () => {
     const [showSchoolPicker, setShowSchoolPicker] = useState(false);
 
     // Form state
+    const [username, setUsername] = useState('toto');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -20,6 +21,7 @@ const Signup = () => {
 
     // Error state
     const [errors, setErrors] = useState({
+        username:'',
         firstName: '',
         lastName: '',
         email: '',
@@ -54,6 +56,7 @@ const Signup = () => {
 
     const validateForm = () => {
         const newErrors = {
+            username: validateRequired(username).errorMessage,
             firstName: validateRequired(firstName).errorMessage,
             lastName: validateRequired(lastName).errorMessage,
             email: validateEmail(email).errorMessage,
@@ -71,6 +74,7 @@ const Signup = () => {
     const handleSubmit = async () => {
         if (validateForm()) {
             const userData = {
+                username,
                 firstName,
                 lastName,
                 email,
@@ -98,7 +102,15 @@ const Signup = () => {
                 <View className="flex-1 justify-center items-center p-4">
                     <View className={`${isMobile ? 'w-full' : 'w-96'} bg-gray-50 p-6 md:p-8 rounded-xl shadow-lg mt-4 mb-4`}>
                         <Text className="text-2xl md:text-3xl font-bold text-center mb-6">Sign Up</Text>
-
+                        <View className="mb-4">
+                            <Text className="text-sm mb-2">Pseudo</Text>
+                            <TextInput
+                                className="w-full p-3 bg-gray-100 rounded-md border border-gray-300"
+                                value={username}
+                                onChangeText={(text) => setUsername(text)}
+                            />
+                            {errors.username ? <Text className="text-red-500 text-xs mt-1">{errors.username}</Text> : null}
+                        </View>
                         <View className="mb-4">
                             <Text className="text-sm mb-2">Prénom</Text>
                             <TextInput
