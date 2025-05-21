@@ -52,4 +52,11 @@ class ApiLoginController extends AbstractController
             'token' => $token,
         ]);
     }
+
+    // Logout endpoint for stateless JWT (front simply discards the token)
+    #[Route('/api/logout', name: 'api_logout', methods: ['POST'])]
+    public function logout(): JsonResponse
+    {
+        return new JsonResponse(null, 204);
+    }
 }

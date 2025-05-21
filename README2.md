@@ -13,7 +13,9 @@
 ```php bin/console doctrine:database:create```
 
 ```php bin/console doctrine:database:create```
-
+```
+php bin/console lexik:jwt:generate-keypair
+```
 ## lancer le frontend
 
 ```cd caentoche-front```
